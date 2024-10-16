@@ -1,0 +1,131 @@
+:root {
+    /* colors */
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+    --circle: hsl(213, 23%, 21%);
+
+    /* typography */
+    --fs-normal: 0.9375rem;
+    --light-weight: 400;
+    --bold-weight: 700;
+
+    --f-family: 'Overpass', sans-serif;
+}
+
+html {
+    font: 100%;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: grid;
+    place-content: center;
+    background-color: var(--very-dark-blue);
+    font-family: var(--f-family);
+}
+
+.card {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    border-radius: 16px;
+    padding: 32px 20px;
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 24px;
+}
+
+.card__star {
+    border-radius: 50%;
+    padding: 10px;
+    background-color: var(--circle);
+}
+
+.card__heading {
+    font-size: 1.5rem;
+    font-weight: var(--bold-weight);
+}
+
+.card__context {
+    font-size: var(--fs-normal);
+    font-weight: var(--light-weight);
+}
+
+.card__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.card__buttons button {
+    background-color: var(--circle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font: inherit;
+    border-radius: 50%;
+    color: var(--white);
+}
+
+.card__submit-btn {
+    width: 100%;
+    padding: 10px 0;
+    background-color: var(--orange);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 16px;
+    font-weight: var(--bold-weight);
+}
+
+.card__buttons button, .card__submit-btn {
+    transition: all 400ms ease-in-out;
+}
+
+.card__buttons button:hover {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.card__buttons button:focus, .card__submit-btn {
+    background-color: var(--white);
+    color: var(--very-dark-blue);
+}
+
+.card__selection {
+    background-color: var(--circle);
+    color: var(--orange);
+    padding: 10px 16px;
+    border-radius: 16px;
+}
+
+.center {
+    align-items: center;
+    margin-inline: auto;
+    align-self: center;
+    text-align: center;
+}
